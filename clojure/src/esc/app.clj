@@ -1,4 +1,4 @@
-(ns app)
+(ns esc.app)
 
 (defn run
   [options]

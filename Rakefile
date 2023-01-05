@@ -5,9 +5,16 @@ namespace :clojure do
     end
   end
 
-  task :test do
-    Dir.chdir('clojure') do
-      sh("bin/kaocha")
+  namespace :test do
+    task :run do
+      Dir.chdir('clojure') do
+        sh("bin/kaocha")
+      end
+    end
+    task :watch do
+      Dir.chdir('clojure') do
+        sh("bin/kaocha --watch")
+      end
     end
   end
 end
