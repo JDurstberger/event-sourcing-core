@@ -5,16 +5,17 @@ defaults: &defaults
     - image: ruby:3.1.1
 
 commands:
-  install_java:
+  install_clojure_dependencies:
     steps:
       - run: ./scripts/ci/common/install-openjdk.sh
+      - run: ./scripts/ci/common/install-clojure.sh
 
 jobs:
   test-clojure:
     <<: *defaults
     steps:
       - checkout
-      - install_java
+      - install_clojure_dependencies
       - run: ./scripts/ci/steps/test-clojure.sh
 
 workflows:
