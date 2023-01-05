@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - install_java
-      - run: ./scripts/ci/steps/test.sh
+      - run: ./scripts/ci/steps/test-clojure.sh
 
 workflows:
   version: 2
