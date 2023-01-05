@@ -10,7 +10,7 @@ commands:
       - run: ./scripts/ci/common/install-openjdk.sh
 
 jobs:
-  test:
+  test-clojure:
     <<: *defaults
     steps:
       - checkout
