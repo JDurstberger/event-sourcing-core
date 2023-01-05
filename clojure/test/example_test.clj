@@ -3,4 +3,4 @@
 
 (deftest example
   (testing "can add numbers"
-    (is (= 3 (+ 1 1)))))
+    (is (= 2 (+ 1 1)))))
