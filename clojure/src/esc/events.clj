@@ -8,10 +8,12 @@
   (database/all database :events))
 
 (defn add
-  [{:keys [database]} type payload]
+  [{:keys [database]} type stream-id payload]
   (database/insert
     database
     :events
     {:created-at (tick/now)
-     :type type
-     :payload payload}))
+     :id         (random-uuid)
+     :type       type
+     :stream-id  stream-id
+     :payload    payload}))
