@@ -10,10 +10,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="16" jdkType="JavaSDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Deps: org.clojure/clojure:1.11.1" level="project" />
     <orderEntry type="library" name="Deps: lambdaisland/deep-diff2:2.4.138" level="project" />
+    <orderEntry type="library" name="Deps: clj-assorted-utils:1.19.0" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.analyzer:1.1.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/core.specs.alpha:0.2.62" level="project" />
     <orderEntry type="library" name="Deps: lambdaisland/kaocha:1.71.1119" level="project" />
     <orderEntry type="library" name="Deps: expound:0.9.0" level="project" />
@@ -21,12 +23,14 @@
     <orderEntry type="library" name="Deps: org.clojure/tools.cli:1.0.206" level="project" />
     <orderEntry type="library" name="Deps: tick:0.5.0" level="project" />
     <orderEntry type="library" name="Deps: lambdaisland/clj-diff:1.3.67" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/tools.analyzer.jvm:1.2.2" level="project" />
     <orderEntry type="library" name="Deps: net.incongru.watchservice/barbary-watchservice:1.0" level="project" />
     <orderEntry type="library" name="Deps: com.widdindustries/cljc.java-time:0.1.21" level="project" />
     <orderEntry type="library" name="Deps: slingshot:0.12.2" level="project" />
     <orderEntry type="library" name="Deps: fipp:0.6.26" level="project" />
     <orderEntry type="library" name="Deps: com.nextjournal/beholder:1.0.0" level="project" />
     <orderEntry type="library" name="Deps: aero:1.1.6" level="project" />
+    <orderEntry type="library" name="Deps: org.ow2.asm/asm:9.2" level="project" />
     <orderEntry type="library" name="Deps: lambdaisland/tools.namespace:0.1.247" level="project" />
     <orderEntry type="library" name="Deps: mvxcvi/arrangement:2.0.0" level="project" />
     <orderEntry type="library" name="Deps: io.methvin/directory-watcher:0.15.0" level="project" />
@@ -38,10 +42,16 @@
     <orderEntry type="library" name="Deps: net.java.dev.jna/jna:5.7.0" level="project" />
     <orderEntry type="library" name="Deps: org.clojure/tools.reader:1.3.6" level="project" />
     <orderEntry type="library" name="Deps: org.tcrawley/dynapath:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: jline:2.14.6" level="project" />
     <orderEntry type="library" name="Deps: cljsjs/js-joda-timezone:2.2.0-0" level="project" />
+    <orderEntry type="library" name="Deps: cli4clj:1.9.0" level="project" />
     <orderEntry type="library" name="Deps: org.slf4j/slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.memoize:1.0.253" level="project" />
     <orderEntry type="library" name="Deps: hawk:0.2.11" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/data.priority-map:1.1.0" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.cache:1.0.225" level="project" />
     <orderEntry type="library" name="Deps: meta-merge:1.0.0" level="project" />
     <orderEntry type="library" name="Deps: cljsjs/js-joda-locale-en-us:3.1.1-1" level="project" />
+    <orderEntry type="library" name="Deps: org.clojure/core.async:1.5.648" level="project" />
   </component>
 </module>

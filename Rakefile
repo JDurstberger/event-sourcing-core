@@ -1,7 +1,7 @@
 namespace :clojure do
   task :run do
     Dir.chdir('clojure') do
-      sh("clj -X app/run")
+      sh("clj -M -m esc.app")
     end
   end
 

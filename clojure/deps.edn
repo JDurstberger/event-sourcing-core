@@ -1,7 +1,9 @@
 {:paths ["src"]
  :deps
  {org.clojure/clojure {:mvn/version "1.11.1"}
-  tick/tick {:mvn/version "0.5.0"}}
+  tick/tick {:mvn/version "0.5.0"}
+  cli4clj/cli4clj {:mvn/version "1.9.0"}}
  :aliases
- {:test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.71.1119"}}
+ {:run {:main-opts ["-m" "ecs.app"]}
+  :test {:extra-deps {lambdaisland/kaocha {:mvn/version "1.71.1119"}}
          :main-opts  ["-m" "kaocha.runner"]}}}
