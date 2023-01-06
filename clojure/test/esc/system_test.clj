@@ -56,3 +56,32 @@
         user (users/get-by-id system id)]
 
     (is (some? user))))
+
+(deftest returns-user-with-changed-name-upon-name-change
+  (let [system (system/new)
+        new-username "Melissa"
+        {:keys [id]} (users/create system "Jane")
+        user (users/change-username system id new-username)]
+
+    (is (= new-username (:username user)))))
+
+(deftest creates-username-changed-event-upon-name-change
+  (let [system (system/new)
+        {:keys [id]} (users/create system "Jane")
+        _ (users/change-username system id "Melissa")
+
+        events (events/all system)
+        event (second events)]
+
+    (is (= 2 (count events)))
+    (is (= :username-changed (:type event)))))
+
+(deftest updates-user-with-changed-name-upon-name-change
+  (let [system (system/new)
+        new-username "Melissa"
+        {:keys [id]} (users/create system "Jane")
+        _ (users/change-username system id new-username)
+
+        user (users/get-by-id system id)]
+
+    (is (= new-username (:username user)))))

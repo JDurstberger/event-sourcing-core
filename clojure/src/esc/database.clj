@@ -22,5 +22,12 @@
   (first (filter #(= value (key %)) (table @database))))
 
 (defn upsert
-  [database table key entry]
-  (swap! database #(update % table conj entry)))
+  [database table id entry]
+
+  (let [entries (table @database)
+        indexed-entries (map-indexed vector entries)
+        index (first (map first (filter #(= id (:id (second %)))
+                                        indexed-entries)))]
+    (if index
+      (swap! database #(update % table assoc index entry))
+      (swap! database #(update % table conj entry)))))

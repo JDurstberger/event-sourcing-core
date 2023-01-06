@@ -10,6 +10,10 @@
   [user {:keys [_ payload]}]
   (assoc user :username (:username payload)))
 
+(defmethod apply-event :username-changed
+  [user {:keys [_ payload]}]
+  (assoc user :username (:username payload)))
+
 (defn project
   [{:keys [database]} user-id]
   (let [events (database/find-all database :events :stream-id user-id)]
@@ -35,3 +39,13 @@
 (defn get-by-id
   [{:keys [database]} id]
   (database/find-one database :projections :id id))
+
+(defn change-username
+  [{:keys [database] :as system} user-id new-username]
+  (events/add system
+              :username-changed
+              user-id
+              {:username new-username})
+  (let [user (project system user-id)]
+    (database/upsert database :projections user-id user)
+    user))
